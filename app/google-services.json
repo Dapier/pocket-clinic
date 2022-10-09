@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "438083029841",
+    "project_id": "pocketclinic-10dca",
+    "storage_bucket": "pocketclinic-10dca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438083029841:android:f28946b4a141897847e170",
+        "android_client_info": {
+          "package_name": "com.example.pocketclinic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438083029841-in1nc30sq5am852kmij1sits3equif7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChZ0ti8KLofxRZS44xDeFHjwPgc18FlIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438083029841-in1nc30sq5am852kmij1sits3equif7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
