@@ -25,8 +25,8 @@
         android:id="@+id/scrollView2"
         android:layout_width="408dp"
         android:layout_height="597dp"
-        android:layout_marginBottom="216dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
@@ -222,25 +222,23 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="169dp"
-        android:layout_height="43dp"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:text="Volver"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="738dp" />
-
-    <Button
         android:id="@+id/button3"
         android:layout_width="200dp"
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
         android:text="Registrar paciente"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="675dp" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="169dp"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:text="Volver"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        tools:layout_editor_absoluteX="120dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
