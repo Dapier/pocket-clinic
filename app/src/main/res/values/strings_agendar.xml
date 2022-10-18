@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="opciones">
+        <item>Curación</item>
+        <item>Terapia Fisica</item>
+        <item>Terapia Desentoxicacion</item>
+        <item>Podología</item>
+
+    </string-array>
+
+</resources>
