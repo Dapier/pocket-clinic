@@ -1,11 +1,13 @@
 package com.example.pocketclinic.ui
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pocketclinic.R
+import com.example.pocketclinic.UserAdapter
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -17,24 +19,26 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         if (viewType==1){
-            //inflate receive
-            //User ADAPTER
+            val view: View = LayoutInflater.from(context).inflate(R.layout.receive, parent, false)
+            return ReceiveViewHolder(view)
         }else{
-            //inflate sent
+            val view: View = LayoutInflater.from(context).inflate(R.layout.sent, parent, false)
+            return SentViewHolder(view)
         }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val currentMessage = messageList[position]
-            if (holder.javaClass == SentViewHolder::class.java){
+
+        if (holder.javaClass == SentViewHolder::class.java){
+
                 //do the stuff for sent view holder
 
-                val viewHolder = holder as SentViewHolder
+                val  viewHolder = holder as SentViewHolder
                 holder.sentMessage.text = currentMessage.message
             }else{
                 //do the stuff for receive view holder
                 val viewHolder = holder as ReceiveViewHolder
-
                 holder.receiveMessage.text = currentMessage.message
             }
     }
@@ -51,10 +55,8 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
     }
 
 
-
-
     override fun getItemCount(): Int {
-        messageList.size
+        return messageList.size
     }
 
     class SentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){

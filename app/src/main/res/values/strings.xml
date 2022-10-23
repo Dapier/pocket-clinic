@@ -30,4 +30,6 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_sign">SignActivity</string>
 
+    <string name="write_a_message">Escribe un mensaje...</string>
+
 </resources>

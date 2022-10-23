@@ -3,19 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/activity_chat.xml" value="0.176" />
+        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/activity_fragment_messages.xml" value="0.20364583333333333" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/activity_messages.xml" value="0.176" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/activity_profile.xml" value="0.2" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/activity_sign_in.xml" value="0.264" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/activity_sign_up.xml" value="0.23177083333333334" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/content_fragment_messages.xml" value="0.25416666666666665" />
+        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/fragment_calendar.xml" value="0.17831813576494426" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/fragment_dashboard.xml" value="0.25416666666666665" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/fragment_first.xml" value="0.264" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/fragment_first2.xml" value="0.29635416666666664" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/fragment_home.xml" value="0.2" />
-        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/fragment_messages.xml" value="0.2" />
+        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/fragment_messages.xml" value="0.4" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/fragment_notifications.xml" value="0.36666666666666664" />
-        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/fragment_profile.xml" value="0.176" />
+        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/fragment_second.xml" value="0.36666666666666664" />
+        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/receive.xml" value="0.36666666666666664" />
+        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/sample_my_view.xml" value="0.15833333333333333" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/sample_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/sent.xml" value="0.264" />
+        <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/layout/user_layout.xml" value="0.2" />
         <entry key="..\:/Kotlin_Apps/pocketClinic/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18802083333333333" />
       </map>
     </option>

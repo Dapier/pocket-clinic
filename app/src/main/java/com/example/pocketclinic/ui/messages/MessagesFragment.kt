@@ -4,9 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.pocketclinic.R
+import com.example.pocketclinic.User
+import com.example.pocketclinic.UserAdapter
 import com.example.pocketclinic.databinding.FragmentMessagesBinding
 
 class MessagesFragment : Fragment() {
@@ -22,6 +26,7 @@ class MessagesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         val messagesViewModel =
             ViewModelProvider(this).get(MessagesViewModel::class.java)
 
@@ -32,6 +37,8 @@ class MessagesFragment : Fragment() {
         }
         return root
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
