@@ -1,6 +1,8 @@
 package com.example.pocketclinic
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -10,7 +12,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.pocketclinic.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var btnRegistrarDatos: Button
+    private lateinit var btnBuscarDatos: Button
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,5 +34,18 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        btnRegistrarDatos = findViewById(R.id.btnRegistrarDatos)
+        btnBuscarDatos = findViewById(R.id.btnBuscarDatos)
+
+        btnRegistrarDatos.setOnClickListener {
+            val intent = Intent(this, Registrarexpedientes::class.java)
+            startActivity(intent)
+        }
+
+        btnBuscarDatos.setOnClickListener {
+            val intent = Intent(this, Buscarexpedientes::class.java)
+            startActivity(intent)
+        }
     }
 }

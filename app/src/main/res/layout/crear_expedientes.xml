@@ -25,9 +25,10 @@
         android:id="@+id/scrollView2"
         android:layout_width="408dp"
         android:layout_height="597dp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveData"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,7 +51,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText"
+                android:id="@+id/form_name"
                 android:layout_width="380dp"
                 android:layout_height="44dp"
                 android:layout_gravity="center"
@@ -62,7 +63,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/editTextDate3"
+                android:id="@+id/form_egresofecha"
                 android:layout_width="380dp"
                 android:layout_height="55dp"
                 android:layout_gravity="center"
@@ -75,7 +76,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editText4"
+                android:id="@+id/form_alergy"
                 android:layout_width="380dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center"
@@ -86,7 +87,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editText7"
+                android:id="@+id/form_egreso"
                 android:layout_width="380dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center"
@@ -97,7 +98,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editText5"
+                android:id="@+id/form_ingreso"
                 android:layout_width="380dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center"
@@ -108,7 +109,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/form_instancia"
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -121,7 +122,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/editTextDate2"
+                android:id="@+id/form_ingresofecha"
                 android:layout_width="380dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -134,7 +135,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/editTextDate"
+                android:id="@+id/form_nacimiento"
                 android:layout_width="380dp"
                 android:layout_height="49dp"
                 android:layout_gravity="center"
@@ -160,7 +161,7 @@
                 tools:layout_editor_absoluteY="602dp" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText"
+                android:id="@+id/form_telefono"
                 android:layout_width="380dp"
                 android:layout_height="44dp"
                 android:layout_gravity="center"
@@ -172,7 +173,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editText4"
+                android:id="@+id/form_estado"
                 android:layout_width="380dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center"
@@ -183,7 +184,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editText7"
+                android:id="@+id/form_municipio"
                 android:layout_width="380dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center"
@@ -194,7 +195,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editText5"
+                android:id="@+id/form_direccion"
                 android:layout_width="380dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center"
@@ -205,7 +206,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/form_correo"
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -222,7 +223,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnSaveData"
         android:layout_width="200dp"
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"
