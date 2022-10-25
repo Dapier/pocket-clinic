@@ -1,4 +1,4 @@
-package com.example.pocketclinic.ui
+package com.example.pocketclinic
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,6 @@ import android.widget.EditText
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.pocketclinic.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -27,9 +26,7 @@ class ChatActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
-        chatRecyclerView = findViewById(R.id.chatRecyclerView)
 
-        val intent = Intent()
         val name = intent.getStringExtra("name")
         val receiverUid = intent.getStringExtra("uid")
 
@@ -40,7 +37,7 @@ class ChatActivity : AppCompatActivity() {
         receiverRoom =  senderUid + receiverUid
 
         supportActionBar?.title = name
-
+        chatRecyclerView = findViewById(R.id.chatRecyclerView)
         messageBox = findViewById(R.id.messageBox)
         sendButton = findViewById(R.id.sentButton)
         messageList = ArrayList()

@@ -1,4 +1,4 @@
-package com.example.pocketclinic.ui
+package com.example.pocketclinic
 
 class Message {
     var message: String? = null
