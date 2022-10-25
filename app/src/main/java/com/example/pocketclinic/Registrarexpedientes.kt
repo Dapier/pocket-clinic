@@ -53,10 +53,7 @@ class Registrarexpedientes : AppCompatActivity() {
                     mAdapter.setOnItemClickListener(object : PatAdapter.onItemClickListener {
                         override fun onItemClick(position: Int) {
 
-                            val intent = Intent(
-                                this@Registrarexpedientes,
-                                PatientDetailsActivity::class.java
-                            )
+
 
                             //put extras
                             intent.putExtra("Nombre", empList[position].form_name)
