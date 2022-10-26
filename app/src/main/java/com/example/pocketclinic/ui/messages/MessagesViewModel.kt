@@ -1,13 +1,12 @@
-package com.example.pocketclinic.ui.home
+package com.example.pocketclinic.ui.messages
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class MessagesViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Aqui encontraras notificaciones de mensajes, citas pendientes y expedientes"
     }
     val text: LiveData<String> = _text
 }
