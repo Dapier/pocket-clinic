@@ -10,6 +10,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.pocketclinic.databinding.ActivityMainBinding
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
     private lateinit var btnRegistrarDatos: Button
@@ -47,5 +49,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Buscarexpedientes::class.java)
             startActivity(intent)
         }
+
+        val firebase : DatabaseReference = FirebaseDatabase.getInstance().getReference()
     }
 }
