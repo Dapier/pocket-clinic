@@ -43,7 +43,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
-                android:text="Datos del Paciente"
+                android:text="@string/datos_del_paciente"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
@@ -53,10 +53,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_name"
                 android:layout_width="380dp"
-                android:layout_height="44dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
-                android:hint="Nombre del paciente"
+                android:hint="@string/nombre_del_paciente"
+                android:textColorHint="#757575"
                 app:layout_constraintBottom_toTopOf="@+id/editTextDate"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.516"
@@ -69,19 +70,21 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
                 android:ems="10"
-                android:hint="Fecha de egreso"
+                android:hint="@string/fecha_de_egreso"
                 android:inputType="date"
+                android:textColorHint="#757575"
                 app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:autofillHints="" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_alergy"
                 android:layout_width="380dp"
-                android:layout_height="38dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
-                android:hint="Alergias"
+                android:hint="@string/alergias"
                 app:layout_constraintBottom_toTopOf="@+id/textView3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -89,10 +92,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_egreso"
                 android:layout_width="380dp"
-                android:layout_height="38dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
-                android:hint="Diagnóstico de egreso"
+                android:hint="@string/diagn_stico_de_egreso"
+                android:textColorHint="#757575"
                 app:layout_constraintBottom_toTopOf="@+id/editText4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -100,10 +104,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_ingreso"
                 android:layout_width="380dp"
-                android:layout_height="38dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
-                android:hint="Diagnóstico de ingreso"
+                android:hint="@string/diagn_stico_de_ingreso"
+                android:textColorHint="#757575"
                 app:layout_constraintBottom_toTopOf="@+id/editText7"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -115,11 +120,14 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
                 android:ems="10"
-                android:hint="Días de instancia"
+                android:hint="@string/d_as_de_instancia"
                 android:inputType="number"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
                 app:layout_constraintBottom_toTopOf="@+id/editText5"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/form_ingresofecha"
@@ -127,9 +135,11 @@
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
+                android:autofillHints=""
                 android:ems="10"
-                android:hint="Fecha de ingreso"
+                android:hint="@string/fecha_de_ingreso"
                 android:inputType="date"
+                android:textColorHint="#757575"
                 app:layout_constraintBottom_toTopOf="@+id/editTextDate3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -141,12 +151,14 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
                 android:ems="10"
-                android:hint="Fecha de nacimiento"
+                android:hint="@string/fecha_de_nacimiento"
                 android:inputType="date"
+                android:textColorHint="#757575"
                 app:layout_constraintBottom_toTopOf="@+id/editTextDate2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.516"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:autofillHints="" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -154,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
-                android:text="Datos de Contacto"
+                android:text="@string/datos_de_contacto"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -166,7 +178,7 @@
                 android:layout_height="44dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
-                android:hint="Teléfono"
+                android:hint="@string/tel_fono"
                 app:layout_constraintBottom_toTopOf="@+id/editTextDate"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.516"
@@ -178,7 +190,7 @@
                 android:layout_height="38dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
-                android:hint="Estado"
+                android:hint="@string/estado"
                 app:layout_constraintBottom_toTopOf="@+id/textView3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -189,7 +201,7 @@
                 android:layout_height="38dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
-                android:hint="Municipio"
+                android:hint="@string/municipio"
                 app:layout_constraintBottom_toTopOf="@+id/editText4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -200,7 +212,7 @@
                 android:layout_height="38dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
-                android:hint="Dirección"
+                android:hint="@string/direcci_n"
                 app:layout_constraintBottom_toTopOf="@+id/editText7"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -212,11 +224,12 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="5dp"
                 android:ems="10"
-                android:hint="Correo"
+                android:hint="@string/correo"
                 android:inputType="number"
                 app:layout_constraintBottom_toTopOf="@+id/editText5"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:autofillHints="" />
 
 
         </LinearLayout>
@@ -225,10 +238,10 @@
     <Button
         android:id="@+id/btnSaveData"
         android:layout_width="200dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
-        android:text="Registrar paciente"
+        android:text="@string/registrar_paciente"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -236,10 +249,11 @@
     <Button
         android:id="@+id/button2"
         android:layout_width="169dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
-        android:text="Volver"
+        android:text="@string/volver"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        tools:layout_editor_absoluteX="120dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

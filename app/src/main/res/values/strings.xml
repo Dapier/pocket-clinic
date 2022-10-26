@@ -13,5 +13,25 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="datos_del_paciente">Datos del Paciente</string>
+    <string name="nombre_del_paciente">Nombre del paciente</string>
+    <string name="fecha_de_egreso">Fecha de egreso</string>
+    <string name="alergias">Alergias</string>
+    <string name="diagn_stico_de_egreso">Diagnóstico de egreso</string>
+    <string name="diagn_stico_de_ingreso">Diagnóstico de ingreso</string>
+    <string name="d_as_de_instancia">Días de instancia</string>
+    <string name="fecha_de_ingreso">Fecha de ingreso</string>
+    <string name="fecha_de_nacimiento">Fecha de nacimiento</string>
+    <string name="datos_de_contacto">Datos de Contacto</string>
+    <string name="tel_fono">Teléfono</string>
+    <string name="estado">Estado</string>
+    <string name="municipio">Municipio</string>
+    <string name="direcci_n">Dirección</string>
+    <string name="correo">Correo</string>
+    <string name="registrar_paciente">Registrar paciente</string>
+    <string name="volver">Volver</string>
+    <string name="volver2">Volver</string>
+    <string name="buscar_expediente">Buscar expediente</string>
+    <string name="loading_data">Loading Data.....</string>
 
 </resources>
