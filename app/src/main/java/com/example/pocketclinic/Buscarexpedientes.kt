@@ -31,7 +31,7 @@ class Buscarexpedientes : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.buscar_expedientes)
+        setContentView(R.layout.crear_expedientes)
 
         etForm_name = findViewById(R.id.form_name)
         etForm_egresofecha = findViewById(R.id.form_egresofecha)

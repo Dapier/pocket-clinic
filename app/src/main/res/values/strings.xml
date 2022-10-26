@@ -33,5 +33,7 @@
     <string name="volver2">Volver</string>
     <string name="buscar_expediente">Buscar expediente</string>
     <string name="loading_data">Loading Data.....</string>
+    <string name="expedientes">Expedientes</string>
+    <string name="buscar_expediente2">Buscar expediente</string>
 
 </resources>

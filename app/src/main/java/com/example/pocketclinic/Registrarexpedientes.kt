@@ -19,7 +19,7 @@ class Registrarexpedientes : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.crear_expedientes)
+        setContentView(R.layout.buscar_expedientes)
 
         empRecyclerView = findViewById(R.id.rvEmp)
         empRecyclerView.layoutManager = LinearLayoutManager(this)

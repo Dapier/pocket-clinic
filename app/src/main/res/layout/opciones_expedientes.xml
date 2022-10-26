@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainExpedientes">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -19,7 +20,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Expedientes"
+        android:text="@string/expedientes"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistrarDatos"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,16 +33,17 @@
         android:layout_height="wrap_content"
         android:text="Registrar expediente"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="239dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnBuscarDatos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buscar expediente"
+        android:text="@string/buscar_expediente2"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
