@@ -12,21 +12,21 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.pocketclinic.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-    <fragment
+        android:id="@+id/navigation_calendar"
+        android:name="com.example.pocketclinic.ui.calendar.CalendarFragment"
+        android:label="@string/title_calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <activity
         android:id="@+id/navigation_messages"
-        android:name="com.example.pocketclinic.ui.notifications.NotificationsFragment"
+        android:name="com.example.pocketclinic.MessagesActivity"
         android:label="@string/title_messages"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/activity_messages" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.pocketclinic.ui.notifications.NotificationsFragment"
+        android:name="com.example.pocketclinic.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_profile" />
 
 
 </navigation>

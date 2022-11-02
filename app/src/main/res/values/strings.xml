@@ -35,6 +35,5 @@
     <string name="loading_data">Loading Data.....</string>
     <string name="expedientes">Expedientes</string>
     <string name="buscar_expediente2">Buscar expediente</string>
-    <string name="patient_name">Patient Name</string>
 
 </resources>
