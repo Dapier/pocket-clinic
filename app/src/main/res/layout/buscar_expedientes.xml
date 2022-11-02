@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Registrarexpedientes">
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="169dp"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:text="@string/volver2"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -34,23 +24,17 @@
         android:layout_marginTop="50dp"
         android:text="@string/buscar_expediente"
         android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/rvEmp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <SearchView
-        android:layout_width="343dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="30dp"
-        android:background="#B6B6B6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvEmp"
-        android:layout_width="399dp"
-        android:layout_height="407dp"
+        android:layout_width="391dp"
+        android:layout_height="513dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"

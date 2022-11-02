@@ -44,6 +44,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation platform('com.google.firebase:firebase-bom:31.0.2')
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
     implementation 'com.google.firebase:firebase-auth:21.0.8'
     testImplementation 'junit:junit:4.13.2'

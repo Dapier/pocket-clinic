@@ -14,7 +14,7 @@ import com.google.firebase.database.*
 class Registrarexpedientes : AppCompatActivity() {
     private lateinit var empRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
-    private lateinit var empList: ArrayList<PatientModel>
+    private lateinit var patList: ArrayList<PatientModel>
     private lateinit var dbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +26,7 @@ class Registrarexpedientes : AppCompatActivity() {
         empRecyclerView.setHasFixedSize(true)
         tvLoadingData = findViewById(R.id.tvLoadingData)
 
-        empList = arrayListOf<PatientModel>()
+        patList = arrayListOf<PatientModel>()
 
         getEmployeesData()
 
@@ -41,13 +41,13 @@ class Registrarexpedientes : AppCompatActivity() {
 
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                empList.clear()
+                patList.clear()
                 if (snapshot.exists()) {
                     for (empSnap in snapshot.children) {
                         val empData = empSnap.getValue(PatientModel::class.java)
-                        empList.add(empData!!)
+                        patList.add(empData!!)
                     }
-                    val mAdapter = PatAdapter(empList)
+                    val mAdapter = PatAdapter(patList)
                     empRecyclerView.adapter = mAdapter
 
                     mAdapter.setOnItemClickListener(object : PatAdapter.onItemClickListener {
@@ -56,19 +56,20 @@ class Registrarexpedientes : AppCompatActivity() {
 
 
                             //put extras
-                            intent.putExtra("Nombre", empList[position].form_name)
-                            intent.putExtra("Fecha Ingreso", empList[position].form_ingresofecha)
-                            intent.putExtra("Fecha egreso", empList[position].form_egresofecha)
-                            intent.putExtra("Diagnostico Ingreso", empList[position].form_ingreso)
-                            intent.putExtra("Diagnostico Egreso", empList[position].form_egreso)
-                            intent.putExtra("Alergias", empList[position].form_alergy)
-                            intent.putExtra("Dias de instancia", empList[position].form_instancia)
-                            intent.putExtra("Fecha Nacimiento", empList[position].form_nacimiento)
-                            intent.putExtra("Correo", empList[position].form_correo)
-                            intent.putExtra("Estado", empList[position].form_estado)
-                            intent.putExtra("Municipio", empList[position].form_municipio)
-                            intent.putExtra("Direccion", empList[position].form_direccion)
-                            intent.putExtra("telefono", empList[position].form_telefono)
+                            intent.putExtra("patId", patList[position].patId)
+                            intent.putExtra("Nombre", patList[position].patNombre)
+                            intent.putExtra("Fecha Ingreso", patList[position].patEgresoFecha)
+                            intent.putExtra("Fecha egreso", patList[position].patAlergy)
+                            intent.putExtra("Diagnostico Ingreso", patList[position].patEgreso)
+                            intent.putExtra("Diagnostico Egreso", patList[position].patIngreso)
+                            intent.putExtra("Alergias", patList[position].patInstancia)
+                            intent.putExtra("Dias de instancia", patList[position].patIngresoFecha)
+                            intent.putExtra("Fecha Nacimiento", patList[position].patNacimiento)
+                            intent.putExtra("Correo", patList[position].patEstado)
+                            intent.putExtra("Estado", patList[position].patDireccion)
+                            intent.putExtra("Municipio", patList[position].patMunicipio)
+                            intent.putExtra("Direccion", patList[position].patTelefono)
+                            intent.putExtra("telefono", patList[position].patCorreo)
                             startActivity(intent)
                         }
 

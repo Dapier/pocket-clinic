@@ -20,13 +20,13 @@ class PatAdapter (private val patList: ArrayList<PatientModel>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.buscar_expedientes, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.pat_list_item, parent, false)
         return ViewHolder(itemView, mListener)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentPat = patList[position]
-        holder.tvPatName.text = currentPat.form_name.toString()
+        holder.tvPatName.text = currentPat.patNombre.toString()
     }
 
     override fun getItemCount(): Int {

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "438083029841",
-    "project_id": "pocketclinic-10dca",
-    "storage_bucket": "pocketclinic-10dca.appspot.com"
+    "project_number": "755098786126",
+    "project_id": "expedientes-23552",
+    "storage_bucket": "expedientes-23552.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:438083029841:android:f28946b4a141897847e170",
+        "mobilesdk_app_id": "1:755098786126:android:b7080c6637628f2ad6e61f",
         "android_client_info": {
           "package_name": "com.example.pocketclinic"
         }
       },
       "oauth_client": [
         {
-          "client_id": "438083029841-in1nc30sq5am852kmij1sits3equif7n.apps.googleusercontent.com",
+          "client_id": "755098786126-mp7qnfm49avtd1sqq6679j5qvtmtkqkl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyChZ0ti8KLofxRZS44xDeFHjwPgc18FlIU"
+          "current_key": "AIzaSyBgighZThxrx68uYXeiB4Jibol5D6gKA-g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "438083029841-in1nc30sq5am852kmij1sits3equif7n.apps.googleusercontent.com",
+              "client_id": "755098786126-mp7qnfm49avtd1sqq6679j5qvtmtkqkl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
