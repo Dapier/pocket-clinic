@@ -7,7 +7,7 @@
     android:layout_gravity="center"
 
     android:backgroundTint="#040303"
-    tools:context=".Buscarexpedientes"
+    tools:context=".activities.InsertPatients"
     tools:ignore="ExtraText">
 
 
@@ -168,6 +168,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
                 android:hint="@string/tel_fono"
+                android:textColorHint="#757575"
                 app:layout_constraintBottom_toTopOf="@+id/editTextDate"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.516"

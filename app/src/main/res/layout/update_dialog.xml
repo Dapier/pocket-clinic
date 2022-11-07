@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<LinearLayout
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="10dp">
 
@@ -9,91 +15,199 @@
         android:id="@+id/etPatName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Patient Name"
-        android:inputType="textPersonName" />
+        android:autofillHints=""
+        android:hint="@string/patient_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="30dp" />
 
     <EditText
         android:id="@+id/etPatFechaEgreso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Patient Leave Date" />
+        android:hint="@string/patient_leave_date"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="98dp" />
 
     <EditText
         android:id="@+id/etPatFechaIngreso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Join date"
-        android:inputType="textPersonName" />
+        android:hint="@string/join_date"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="393dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="166dp" />
+
     <EditText
         android:id="@+id/etPatDiagI"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Initial diag"
-        android:inputType="textPersonName" />
+        android:hint="@string/initial_diag"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="235dp" />
+
     <EditText
         android:id="@+id/etPatDiagE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Final diag"
-        android:inputType="textPersonName" />
-    <EditText
-        android:id="@+id/etPatDInstancia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Intance days"
-        android:inputType="textPersonName" />
-    <EditText
-        android:id="@+id/etPatNacimiento"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Born date"
-        android:inputType="textPersonName" />
+        android:hint="@string/final_diag"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="303dp" />
+
     <EditText
         android:id="@+id/etPatTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Phone"
-        android:inputType="textPersonName" />
+        android:hint="@string/phone"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="371dp" />
+
     <EditText
         android:id="@+id/etPatDireccion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Direction"
-        android:inputType="textPersonName" />
+        android:hint="@string/direction"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="439dp" />
+
     <EditText
         android:id="@+id/etPatCorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Email"
-        android:inputType="textPersonName" />
+        android:hint="@string/email"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="507dp" />
+    <EditText
+        android:id="@+id/etPatEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/estado"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="507dp" />
+    <EditText
+        android:id="@+id/etPatMunicipio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/municipio"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="507dp" />
+    <EditText
+        android:id="@+id/etPatAlergias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/alergias"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="507dp" />
+
+    <EditText
+        android:id="@+id/etPatInstancia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/d_as_de_instancia"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="507dp" />
+
+    <EditText
+        android:id="@+id/etPatNacimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/fecha_de_nacimiento"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="392dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="507dp" />
 
 
     <Button
         android:id="@+id/btnUpdateData"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Update Data" />
+        android:text="@string/update_data"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="138dp"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="576dp" />
 
 
 </LinearLayout>
+</ScrollView>

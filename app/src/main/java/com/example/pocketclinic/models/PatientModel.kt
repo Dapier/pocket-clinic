@@ -1,4 +1,4 @@
-package com.example.pocketclinic
+package com.example.pocketclinic.models
 
 import android.widget.EditText
 import android.widget.TextView

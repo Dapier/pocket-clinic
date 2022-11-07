@@ -134,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="180dp"
         android:fontFamily="@font/nunito_sans_semibold"
-        android:text="@string/signup_title"
+        android:text="signup_title"
         android:textColor="#000000"
         android:textSize="29sp"
         android:textStyle="bold"
@@ -147,7 +147,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/signup_subtitle"
+        android:text="signup_subtitle"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/emailLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,6 +155,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.18"
-        tools:text="@string/signup_subtitle" />
+        tools:text="signup_subtitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

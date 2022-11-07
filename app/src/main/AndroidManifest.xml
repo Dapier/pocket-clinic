@@ -36,19 +36,16 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".fragment_messages"
-            android:exported="false"
-            android:label="@string/title_activity_fragment_messages"
-            android:theme="@style/Theme.PocketClinic.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name">
+            <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".MainExpedientes"
+            android:name=".activities.MainExpedientes"
             android:exported="true"
             android:label="@string/app_name" >
             <intent-filter>
@@ -58,7 +55,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Registrarexpedientes"
+            android:name=".activities.FetchingPatients"
             android:exported="true"
             android:label="@string/app_name" >
             <intent-filter>
@@ -68,7 +65,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Buscarexpedientes"
+            android:name=".activities.InsertPatients"
             android:exported="true"
             android:label="@string/app_name" >
             <intent-filter>
@@ -77,6 +74,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PatientDetailsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"

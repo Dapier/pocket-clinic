@@ -35,5 +35,30 @@
     <string name="loading_data">Loading Data.....</string>
     <string name="expedientes">Expedientes</string>
     <string name="buscar_expediente2">Buscar expediente</string>
+    <string name="loading_data2">Loading Data.....</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="join_date">Join date</string>
+    <string name="initial_diag">Initial diag</string>
+    <string name="final_diag">Final diag</string>
+    <string name="phone">Phone</string>
+    <string name="direction">Direction</string>
+    <string name="email">Email</string>
+    <string name="update_data">Update Data</string>
+    <string name="patient_leave_date">Patient Leave Date</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="pat_id">Pat ID</string>
+    <string name="patient_name2">Patient Name</string>
+    <string name="fecha_egreso">Fecha egreso</string>
+    <string name="fecha_ingreso">Fecha Ingreso</string>
+    <string name="alergiass">Alergias</string>
+    <string name="diag_ingreso">Diag Ingreso</string>
+    <string name="diag_egreso">Diag Egreso</string>
+    <string name="dias_instancia">Dias Instancia</string>
+    <string name="fecha_nacimiento">Fecha nacimiento</string>
+    <string name="estadoa">Estado</string>
+    <string name="municipios">Municipio</string>
+    <string name="telefono">Teléfono</string>
+    <string name="emaill">Correo</string>
 
 </resources>

@@ -1,15 +1,17 @@
-package com.example.pocketclinic
+package com.example.pocketclinic.activities
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.pocketclinic.models.PatientModel
+import com.example.pocketclinic.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 //Insertion Activity
-class Buscarexpedientes : AppCompatActivity(){
+class InsertPatients : AppCompatActivity(){
 
     private lateinit var etForm_name: EditText
     private lateinit var etForm_egresofecha: EditText

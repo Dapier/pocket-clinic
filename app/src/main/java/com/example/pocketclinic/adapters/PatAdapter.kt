@@ -1,10 +1,12 @@
-package com.example.pocketclinic
+package com.example.pocketclinic.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pocketclinic.R
+import com.example.pocketclinic.models.PatientModel
 
 class PatAdapter (private val patList: ArrayList<PatientModel>):
     RecyclerView.Adapter<PatAdapter.ViewHolder>() {
@@ -19,14 +21,14 @@ class PatAdapter (private val patList: ArrayList<PatientModel>):
         mListener = clickListener
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PatAdapter.ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.pat_list_item, parent, false)
         return ViewHolder(itemView, mListener)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PatAdapter.ViewHolder, position: Int) {
         val currentPat = patList[position]
-        holder.tvPatName.text = currentPat.patNombre.toString()
+        holder.tvPatName.text = currentPat.patNombre
     }
 
     override fun getItemCount(): Int {

@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/navigation_calendar"
         android:name="com.example.pocketclinic.ui.calendar.CalendarFragment"
-        android:label="@string/title_calendar"
+        android:label="title_calendar"
         tools:layout="@layout/fragment_calendar" />
     <activity
         android:id="@+id/navigation_messages"

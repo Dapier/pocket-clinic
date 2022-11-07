@@ -1,9 +1,10 @@
-package com.example.pocketclinic
+package com.example.pocketclinic.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import com.example.pocketclinic.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -19,12 +20,12 @@ class MainExpedientes : AppCompatActivity() {
         btnBuscarDatos = findViewById(R.id.btnBuscarDatos)
 
         btnRegistrarDatos.setOnClickListener {
-            val intent = Intent(this, Buscarexpedientes::class.java)
+            val intent = Intent(this, InsertPatients::class.java)
             startActivity(intent)
         }
 
         btnBuscarDatos.setOnClickListener {
-            val intent = Intent(this, Registrarexpedientes::class.java)
+            val intent = Intent(this, FetchingPatients::class.java)
             startActivity(intent)
         }
 
