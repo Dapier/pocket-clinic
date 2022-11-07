@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Update"
+        android:text="@string/update"
         app:layout_constraintEnd_toStartOf="@+id/btnDelete"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Delete"
+        android:text="@string/delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnUpdate"
@@ -48,7 +48,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Pat ID"
+                    android:text="@string/pat_id"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -97,7 +97,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
-            android:weightSum="2">
+            android:weightSum="2"
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -110,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Patient Name"
+                    android:text="@string/patient_name2"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -147,7 +148,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -160,7 +161,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Fecha egreso"
+                    android:text="@string/fecha_egreso"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -201,7 +202,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -215,7 +216,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Fecha Ingreso"
+                    android:text="@string/fecha_ingreso"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -255,7 +256,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -269,7 +270,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Alergias"
+                    android:text="@string/alergiass"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -308,7 +309,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -322,7 +323,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Diag Ingreso"
+                    android:text="@string/diag_ingreso"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -361,7 +362,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -375,7 +376,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Diag Egreso"
+                    android:text="@string/diag_egreso"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -414,7 +415,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -428,7 +429,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Dias Instancia"
+                    android:text="@string/dias_instancia"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -467,7 +468,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -481,7 +482,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Fecha nacimiento"
+                    android:text="@string/fecha_nacimiento"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -520,7 +521,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -534,7 +535,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Estado"
+                    android:text="@string/estadoa"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -573,7 +574,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -587,7 +588,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Municipio"
+                    android:text="@string/municipios"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -626,7 +627,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -640,7 +641,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Teléfono"
+                    android:text="@string/telefono"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -679,7 +680,7 @@
             android:orientation="horizontal"
             android:weightSum="2"
 
-            >
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -693,7 +694,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Correo"
+                    android:text="@string/emaill"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 

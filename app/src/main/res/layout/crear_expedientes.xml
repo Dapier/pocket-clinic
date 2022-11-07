@@ -7,29 +7,17 @@
     android:layout_gravity="center"
 
     android:backgroundTint="#040303"
-    tools:context=".Buscarexpedientes"
+    tools:context=".activities.InsertPatients"
     tools:ignore="ExtraText">
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
-
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="408dp"
-        android:layout_height="597dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSaveData"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        android:layout_width="411dp"
+        android:layout_height="691dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="-3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,7 +26,7 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="wrap_content"
+                android:layout_width="377dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="80dp"
@@ -52,7 +40,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/form_name"
+                android:id="@+id/etForm_name"
                 android:layout_width="380dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -64,8 +52,32 @@
                 app:layout_constraintHorizontal_bias="0.516"
                 app:layout_constraintStart_toStartOf="parent" />
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etForm_egreso"
+                android:layout_width="380dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:hint="@string/diagn_stico_de_egreso"
+                android:textColorHint="#757575"
+                app:layout_constraintBottom_toTopOf="@+id/editText4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etForm_ingreso"
+                android:layout_width="380dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:hint="@string/diagn_stico_de_ingreso"
+                android:textColorHint="#757575"
+                app:layout_constraintBottom_toTopOf="@+id/editText7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <EditText
-                android:id="@+id/form_egresofecha"
+                android:id="@+id/etForm_egresofecha"
                 android:layout_width="380dp"
                 android:layout_height="55dp"
                 android:layout_gravity="center"
@@ -80,7 +92,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/form_alergy"
+                android:id="@+id/etForm_alergy"
                 android:layout_width="380dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -90,32 +102,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/form_egreso"
-                android:layout_width="380dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="12dp"
-                android:hint="@string/diagn_stico_de_egreso"
-                android:textColorHint="#757575"
-                app:layout_constraintBottom_toTopOf="@+id/editText4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/form_ingreso"
-                android:layout_width="380dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="12dp"
-                android:hint="@string/diagn_stico_de_ingreso"
-                android:textColorHint="#757575"
-                app:layout_constraintBottom_toTopOf="@+id/editText7"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
             <EditText
-                android:id="@+id/form_instancia"
+                android:id="@+id/etForm_instancia"
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -131,7 +119,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/form_ingresofecha"
+                android:id="@+id/etForm_ingresofecha"
                 android:layout_width="380dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -146,7 +134,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/form_nacimiento"
+                android:id="@+id/etForm_nacimiento"
                 android:layout_width="380dp"
                 android:layout_height="49dp"
                 android:layout_gravity="center"
@@ -174,21 +162,22 @@
                 tools:layout_editor_absoluteY="602dp" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/form_telefono"
+                android:id="@+id/etForm_telefono"
                 android:layout_width="380dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
                 android:hint="@string/tel_fono"
+                android:textColorHint="#757575"
                 app:layout_constraintBottom_toTopOf="@+id/editTextDate"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.516"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/form_estado"
+                android:id="@+id/etForm_estado"
                 android:layout_width="380dp"
-                android:layout_height="38dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
                 android:hint="@string/estado"
@@ -197,9 +186,9 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/form_municipio"
+                android:id="@+id/etForm_municipio"
                 android:layout_width="380dp"
-                android:layout_height="38dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
                 android:hint="@string/municipio"
@@ -208,9 +197,9 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/form_direccion"
+                android:id="@+id/etForm_direccion"
                 android:layout_width="380dp"
-                android:layout_height="38dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp"
                 android:hint="@string/direcci_n"
@@ -219,32 +208,29 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/form_correo"
+                android:id="@+id/etForm_correo"
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="40dp"
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/correo"
-                android:inputType="number"
+                android:inputType="text"
+                android:minHeight="48dp"
                 app:layout_constraintBottom_toTopOf="@+id/editText5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
+            <Button
+                android:id="@+id/etSaveData"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_gravity="center|end"
+                android:text="@string/registrar_paciente" />
+
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/btnSaveData"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:text="@string/registrar_paciente"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

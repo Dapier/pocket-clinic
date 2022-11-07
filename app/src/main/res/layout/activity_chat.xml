@@ -28,7 +28,7 @@
             android:id="@+id/messageBox"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:hint="@string/write_a_message"
+            android:hint="write_a_message"
             android:layout_marginLeft="10dp"
             android:paddingLeft="10dp"
 

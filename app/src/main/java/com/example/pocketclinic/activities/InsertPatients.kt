@@ -1,15 +1,17 @@
-package com.example.pocketclinic
+package com.example.pocketclinic.activities
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.pocketclinic.models.PatientModel
+import com.example.pocketclinic.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 //Insertion Activity
-class Buscarexpedientes : AppCompatActivity(){
+class InsertPatients : AppCompatActivity(){
 
     private lateinit var etForm_name: EditText
     private lateinit var etForm_egresofecha: EditText
@@ -33,20 +35,20 @@ class Buscarexpedientes : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.crear_expedientes)
 
-        etForm_name = findViewById(R.id.form_name)
-        etForm_egresofecha = findViewById(R.id.form_egresofecha)
-        etForm_alergy = findViewById(R.id.form_alergy)
-        etForm_egreso = findViewById(R.id.form_egreso)
-        etForm_ingreso = findViewById(R.id.form_ingreso)
-        etForm_instancia = findViewById(R.id.form_instancia)
-        etForm_ingresofecha = findViewById(R.id.form_ingresofecha)
-        etForm_nacimiento = findViewById(R.id.form_nacimiento)
-        etForm_estado = findViewById(R.id.form_estado)
-        etForm_municipio = findViewById(R.id.form_municipio)
-        etForm_direccion = findViewById(R.id.form_direccion)
-        etForm_correo = findViewById(R.id.form_correo)
-        etForm_telefono = findViewById(R.id.form_telefono)
-        etSaveData = findViewById(R.id.btnSaveData)
+        etForm_name = findViewById(R.id.etForm_name)
+        etForm_egresofecha = findViewById(R.id.etForm_egresofecha)
+        etForm_alergy = findViewById(R.id.etForm_alergy)
+        etForm_egreso = findViewById(R.id.etForm_egreso)
+        etForm_ingreso = findViewById(R.id.etForm_ingreso)
+        etForm_instancia = findViewById(R.id.etForm_instancia)
+        etForm_ingresofecha = findViewById(R.id.etForm_ingresofecha)
+        etForm_nacimiento = findViewById(R.id.etForm_nacimiento)
+        etForm_estado = findViewById(R.id.etForm_estado)
+        etForm_municipio = findViewById(R.id.etForm_municipio)
+        etForm_direccion = findViewById(R.id.etForm_direccion)
+        etForm_correo = findViewById(R.id.etForm_correo)
+        etForm_telefono = findViewById(R.id.etForm_telefono)
+        etSaveData = findViewById(R.id.etSaveData)
 
 
         dbRef = FirebaseDatabase.getInstance().getReference("Patients")
@@ -118,7 +120,8 @@ class Buscarexpedientes : AppCompatActivity(){
 
         val patId = dbRef.push().key!!
 
-        val patient = PatientModel(patId, patNombre, patCorreo, patDireccion)
+        val patient = PatientModel(patId, patNombre, patEgresoFecha, patAlergy, patEgreso, patIngreso, patInstancia, patIngresoFecha, patNacimiento
+        ,patEstado, patDireccion, patMunicipio, patTelefono, patCorreo)
 
         dbRef.child(patId).setValue(patient)
             .addOnCompleteListener {
@@ -131,6 +134,7 @@ class Buscarexpedientes : AppCompatActivity(){
                 etForm_estado.text.clear()
                 etForm_nacimiento.text.clear()
                 etForm_ingresofecha.text.clear()
+                etForm_instancia.text.clear()
                 etForm_ingreso.text.clear()
                 etForm_egreso.text.clear()
                 etForm_egresofecha.text.clear()

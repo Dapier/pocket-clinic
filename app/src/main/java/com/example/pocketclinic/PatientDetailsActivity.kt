@@ -8,6 +8,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.pocketclinic.activities.FetchingPatients
+import com.example.pocketclinic.models.PatientModel
 import com.google.firebase.database.FirebaseDatabase
 
 class PatientDetailsActivity : AppCompatActivity(){
@@ -22,6 +24,7 @@ class PatientDetailsActivity : AppCompatActivity(){
     private lateinit var tvPatEstado: TextView
     private lateinit var tvPatMunicipio: TextView
     private lateinit var tvPatNacimiento: TextView
+    private lateinit var tvPatDireccion: TextView
     private lateinit var tvPatTelefono: TextView
     private lateinit var tvPatCorreo: TextView
 
@@ -50,8 +53,8 @@ class PatientDetailsActivity : AppCompatActivity(){
     }
 
     private fun openUpdateDialog(
-        PatId: String,
-        patName: String
+        patId: String,
+        patNombre: String
     ) {
         val mDialog = AlertDialog.Builder(this)
         val inflater = layoutInflater
@@ -59,35 +62,37 @@ class PatientDetailsActivity : AppCompatActivity(){
 
         mDialog.setView(mDialogView)
 
-        val etPatName = mDialogView.findViewById<EditText>(R.id.form_name)
-        val etFechaEgreso = mDialogView.findViewById<EditText>(R.id.form_egresofecha)
-        val etFechaIngreso = mDialogView.findViewById<EditText>(R.id.form_ingresofecha)
-        val etAlergia = mDialogView.findViewById<EditText>(R.id.form_alergy)
-        val etDiagEgreso = mDialogView.findViewById<EditText>(R.id.form_egreso)
-        val etDiagIngreso = mDialogView.findViewById<EditText>(R.id.form_ingreso)
-        val etInstancia = mDialogView.findViewById<EditText>(R.id.form_instancia)
-        val etEstado = mDialogView.findViewById<EditText>(R.id.form_estado)
-        val etMunicipio = mDialogView.findViewById<EditText>(R.id.form_municipio)
-        val etDireccion = mDialogView.findViewById<EditText>(R.id.form_direccion)
-        val etNacimiento = mDialogView.findViewById<EditText>(R.id.form_nacimiento)
-        val etTelefono = mDialogView.findViewById<EditText>(R.id.form_telefono)
-        val etCorreo = mDialogView.findViewById<EditText>(R.id.form_correo)
+        val etPatName = mDialogView.findViewById<EditText>(R.id.etPatName)
+        val etPatFechaEgreso = mDialogView.findViewById<EditText>(R.id.etPatFechaEgreso)
+        val etPatFechaIngreso = mDialogView.findViewById<EditText>(R.id.etPatFechaIngreso)
+        val etDiagEgreso = mDialogView.findViewById<EditText>(R.id.etPatDiagE)
+        val etDiagIngreso = mDialogView.findViewById<EditText>(R.id.etPatDiagI)
+        val etDireccion = mDialogView.findViewById<EditText>(R.id.etPatDireccion)
+        val etTelefono = mDialogView.findViewById<EditText>(R.id.etPatTelefono)
+        val etCorreo = mDialogView.findViewById<EditText>(R.id.etPatCorreo)
+        val etEstado = mDialogView.findViewById<EditText>(R.id.etPatEstado)
+        val etMunicipio = mDialogView.findViewById<EditText>(R.id.etPatMunicipio)
+        val etAlergias = mDialogView.findViewById<EditText>(R.id.etPatAlergias)
+        val etInstancia = mDialogView.findViewById<EditText>(R.id.etPatInstancia)
+        val etNacimiento = mDialogView.findViewById<EditText>(R.id.etPatNacimiento)
+
 
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
-        etPatName.setText(intent.getStringExtra("PatName").toString())
-        etFechaEgreso.setText(intent.getStringExtra("PatFechaEgreso").toString())
-        etFechaIngreso.setText(intent.getStringExtra("PatFechaIngreso").toString())
-        etAlergia.setText(intent.getStringExtra("patAlergia").toString())
-        etDiagEgreso.setText(intent.getStringExtra("PatDiagEgreso").toString())
-        etDiagIngreso.setText(intent.getStringExtra("PatDiagIngreso").toString())
-        etInstancia.setText(intent.getStringExtra("PatInstancia").toString())
-        etEstado.setText(intent.getStringExtra("PatEstado").toString())
-        etMunicipio.setText(intent.getStringExtra("PatMunicipio").toString())
-        etDireccion.setText(intent.getStringExtra("PatDireccion").toString())
-        etNacimiento.setText(intent.getStringExtra("PatNacimiento").toString())
-        etTelefono.setText(intent.getStringExtra("PatTelefono").toString())
-        etCorreo.setText(intent.getStringExtra("PatCorreo").toString())
+
+        etPatName.setText(intent.getStringExtra("patNombre").toString())
+        etPatFechaEgreso.setText(intent.getStringExtra("patEgresoFecha").toString())
+        etPatFechaIngreso.setText(intent.getStringExtra("patIngresoFecha").toString())
+        etDiagEgreso.setText(intent.getStringExtra("patEgreso").toString())
+        etDiagIngreso.setText(intent.getStringExtra("patIngreso").toString())
+        etDireccion.setText(intent.getStringExtra("patDireccion").toString())
+        etTelefono.setText(intent.getStringExtra("patTelefono").toString())
+        etCorreo.setText(intent.getStringExtra("patCorreo").toString())
+        etEstado.setText(intent.getStringExtra("patEstado").toString())
+        etMunicipio.setText(intent.getStringExtra("patMunicipio").toString())
+        etAlergias.setText(intent.getStringExtra("patAlergias").toString())
+        etInstancia.setText(intent.getStringExtra("patInstancia").toString())
+        etNacimiento.setText(intent.getStringExtra("patNacimiento").toString())
 
 
         mDialog.setTitle("Updating $etPatName Record")
@@ -97,61 +102,66 @@ class PatientDetailsActivity : AppCompatActivity(){
 
         btnUpdateData.setOnClickListener {
             updateEmpData(
-                PatId,
+                patId,
                 etPatName.text.toString(),
-                etFechaEgreso.text.toString(),
-                etFechaIngreso.text.toString(),
-                etAlergia.text.toString(),
-                etDiagEgreso.text.toString(),
+                etPatFechaEgreso.text.toString(),
+                etPatFechaIngreso.text.toString(),
                 etDiagIngreso.text.toString(),
-                etInstancia.text.toString(),
+                etDiagIngreso.text.toString(),
+                etDireccion.text.toString(),
+                etTelefono.text.toString(),
+                etCorreo.text.toString(),
                 etEstado.text.toString(),
                 etMunicipio.text.toString(),
-                etDireccion.text.toString(),
+                etAlergias.text.toString(),
                 etNacimiento.text.toString(),
-                etTelefono.text.toString(),
-                etCorreo.text.toString()
+                etInstancia.text.toString()
             )
 
             Toast.makeText(applicationContext, "Patient Data Updated", Toast.LENGTH_LONG).show()
 
-            //we are setting updated data to our textviews
+            //we are setting updated data to our textview
             tvPatNombre.text = etPatName.text.toString()
-            tvPatFechaEgreso.text = etFechaEgreso.text.toString()
-            tvPatFechaIngreso.text = etDiagIngreso.text.toString()
-            tvPatAlergias.text = etAlergia.text.toString()
-            tvPatDiagI.text = etDiagIngreso.text.toString()
-            tvPatDiagE.text = etDiagEgreso.text.toString()
-            tvPatDInstancia.text = etInstancia.text.toString()
-            tvPatEstado.text = etEstado.text.toString()
-            tvPatMunicipio.text = etMunicipio.text.toString()
-            tvPatNacimiento.text = etNacimiento.text.toString()
+            tvPatFechaIngreso.text = etPatFechaIngreso.text.toString()
+            tvPatFechaEgreso.text = etPatFechaEgreso.text.toString()
+            tvPatDiagE.text = etDiagIngreso.text.toString()
+            tvPatDiagI.text = etDiagEgreso.text.toString()
+            tvPatDireccion.text = etDireccion.text.toString()
             tvPatTelefono.text = etTelefono.text.toString()
             tvPatCorreo.text = etCorreo.text.toString()
+            tvPatEstado.text = etEstado.text.toString()
+            tvPatMunicipio.text = etMunicipio.text.toString()
+            tvPatAlergias.text = etAlergias.text.toString()
+            tvPatNacimiento.text = etAlergias.text.toString()
+            tvPatDInstancia.text = etInstancia.text.toString()
 
             alertDialog.dismiss()
         }
     }
 
+
+
     private fun updateEmpData(
-        id: String,
-        name: String,
-        age: String,
-        salary: String,
-        toString: String,
-        toString1: String,
-        toString2: String,
-        toString3: String,
-        toString4: String,
-        toString5: String,
-        toString6: String,
-        toString7: String,
-        toString8: String,
-        toString9: String
-    ) {
-        val dbRef = FirebaseDatabase.getInstance().getReference("Patients").child(id)
-        //val patInfo = PatientModel(tvPatId, tvPatNombre, tvPatEstado, tvPatTelefono)
-        //dbRef.setValue(patInfo)
+        patId: String,
+        patNombre: String,
+        patIngreso: String,
+        patEgreso: String,
+        patEgresoFecha: String,
+        patIngresoFecha: String,
+        patDireccion: String,
+        patTelefono: String,
+        patCorreo: String,
+        patEstado: String,
+        patMunicipio: String,
+        patAlergy: String,
+        patNacimiento: String,
+        patInstancia: String
+
+
+        ) {
+        val dbRef = FirebaseDatabase.getInstance().getReference("Patients").child(patId)
+        val patInfo = PatientModel(patId, patNombre,  patIngreso, patEgreso, patDireccion, patEgresoFecha, patIngresoFecha, patTelefono, patCorreo, patEstado, patMunicipio, patAlergy, patNacimiento, patInstancia)
+        dbRef.setValue(patInfo)
     }
 
 
@@ -178,17 +188,17 @@ class PatientDetailsActivity : AppCompatActivity(){
     private fun setValuesToViews() {
         tvPatId.text = intent.getStringExtra("patId")
         tvPatNombre.text = intent.getStringExtra("patNombre")
-        tvPatFechaEgreso.text = intent.getStringExtra("patFechaEgreso")
-        tvPatFechaIngreso.text = intent.getStringExtra("patFechaIngreso")
-        tvPatDiagE.text = intent.getStringExtra("patDiagE")
-        tvPatDiagI.text = intent.getStringExtra("patDiagI")
-        tvPatAlergias.text = intent.getStringExtra("patAlergias")
+        tvPatFechaEgreso.text = intent.getStringExtra("patEgresoFecha")
+        tvPatFechaIngreso.text = intent.getStringExtra("patIngresoFecha")
+        tvPatDiagE.text = intent.getStringExtra("patEgreso")
+        tvPatDiagI.text = intent.getStringExtra("patIngreso")
+        tvPatAlergias.text = intent.getStringExtra("patAlergy")
         tvPatEstado.text = intent.getStringExtra("patEstado")
         tvPatNacimiento.text = intent.getStringExtra("patNacimiento")
         tvPatEstado.text = intent.getStringExtra("patEstado")
         tvPatMunicipio.text = intent.getStringExtra("patMunicipio")
         tvPatTelefono.text = intent.getStringExtra("patTelefono")
-        tvPatDInstancia.text = intent.getStringExtra("patDinstancia")
+        tvPatDInstancia.text = intent.getStringExtra("patInstancia")
         tvPatCorreo.text = intent.getStringExtra("patCorreo")
 
     }
@@ -202,7 +212,7 @@ class PatientDetailsActivity : AppCompatActivity(){
         mTask.addOnSuccessListener {
             Toast.makeText(this, "Patient data deleted", Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, Registrarexpedientes::class.java)
+            val intent = Intent(this, FetchingPatients::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener{ error ->
