@@ -15,6 +15,10 @@
         android:id="@+id/navigation_messages"
         android:icon="@drawable/ic_baseline_chat_bubble_black_24"
         android:title="@string/title_messages" />
+    <item
+        android:id="@+id/expedientes"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/expedientes" />
 
     <item
         android:id="@+id/navigation_profile"

@@ -60,5 +60,6 @@
     <string name="municipios">Municipio</string>
     <string name="telefono">Teléfono</string>
     <string name="emaill">Correo</string>
+    <string name="expedientesMain">Expedientes</string>
 
 </resources>

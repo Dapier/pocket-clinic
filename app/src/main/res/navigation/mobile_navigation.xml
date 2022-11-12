@@ -21,6 +21,11 @@
         android:name="com.example.pocketclinic.MessagesActivity"
         android:label="@string/title_messages"
         tools:layout="@layout/activity_messages" />
+    <activity
+        android:id="@+id/expedientes"
+        android:name="com.example.pocketclinic.activities.MainExpedientes"
+        android:label="@string/expedientes"
+        tools:layout="@layout/opciones_expedientes" />
 
     <fragment
         android:id="@+id/navigation_profile"

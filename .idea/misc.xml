@@ -34,15 +34,19 @@
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/activity_chat.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/activity_fragment_messages.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/activity_messages.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/activity_profile.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/activity_sign_in.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/activity_sign_up.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/buscar_expedientes.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/content_fragment_messages.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/crear_expedientes.xml" value="0.2965811965811966" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/fragment_calendar.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/fragment_dashboard.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/fragment_messages.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/fragment_notifications.xml" value="0.3625" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/fragment_profile.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/fragment_second.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/opciones_expedientes.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/pat_list_item.xml" value="0.3625" />
@@ -51,6 +55,7 @@
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/sent.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/update_dialog.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/updatedialog.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/layout/user_layout.xml" value="0.3625" />
         <entry key="..\:/Users/ricar/AndroidStudioProjects/pocket-clinic2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
       </map>
     </option>

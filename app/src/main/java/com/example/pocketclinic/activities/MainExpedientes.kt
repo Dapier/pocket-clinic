@@ -30,5 +30,8 @@ class MainExpedientes : AppCompatActivity() {
         }
 
         val firebase: DatabaseReference = FirebaseDatabase.getInstance().getReference()
+
+
+
     }
 }
