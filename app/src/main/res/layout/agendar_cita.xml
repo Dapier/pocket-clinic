@@ -37,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/writeName"
         android:layout_width="251dp"
         android:layout_height="44dp"
         android:layout_marginStart="28dp"
@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Spinner
-        android:id="@+id/spnElementos"
+        android:id="@+id/spnServicios"
         android:layout_width="187dp"
         android:layout_height="34dp"
         android:layout_marginStart="5dp"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/writeName" />
 
     <Button
         android:id="@+id/botonFecha"
@@ -102,7 +102,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.292"
         app:layout_constraintStart_toEndOf="@+id/botonFecha"
-        app:layout_constraintTop_toBottomOf="@+id/spnElementos" />
+        app:layout_constraintTop_toBottomOf="@+id/spnServicios" />
 
     <Button
         android:id="@+id/botonHora"
@@ -145,12 +145,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnRegresar"
+        android:id="@+id/btnVerCitados"
         android:layout_width="235dp"
         android:layout_height="54dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/blue_100"
-        android:text="Volver"
+        android:text="Ver Citados"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

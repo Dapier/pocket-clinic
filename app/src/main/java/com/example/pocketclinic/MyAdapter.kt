@@ -5,15 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pocketclinic.ui.recolectionData
 
-class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
-    private val userList = ArrayList<citationData>()
 
+class MyAdapter(private val userList : ArrayList<recolectionData>): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
             R.layout.pacient_item,
-            parent,false
+            parent, false
         )
         return MyViewHolder(itemView)
 
@@ -23,9 +23,9 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
         val currentitem = userList[position]
 
-        holder.pacientName.text = currentitem.Name
-        holder.typeService.text = currentitem.service
-        holder.hourProgram.text = currentitem.hour
+        holder.name.text = currentitem.name
+        holder.service.text = currentitem.service
+        holder.hour.text = currentitem.hour
 
     }
 
@@ -33,19 +33,13 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
         return userList.size
     }
 
-    fun updateUserList(userList : List<citationData>){
 
-        this.userList.clear()
-        this.userList.addAll(userList)
-        notifyDataSetChanged()
-
-    }
 
     class  MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
-        val pacientName : TextView = itemView.findViewById(R.id.tvfirstName)
-        val typeService : TextView = itemView.findViewById(R.id.tvServices)
-        val hourProgram : TextView = itemView.findViewById(R.id.tvhourProgram)
+        val name : TextView = itemView.findViewById(R.id.tvfirstName)
+        val service : TextView = itemView.findViewById(R.id.tvServices)
+        val hour : TextView = itemView.findViewById(R.id.tvhourProgram)
 
     }
 }

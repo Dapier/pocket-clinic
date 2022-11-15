@@ -2,8 +2,8 @@ package com.example.pocketclinic
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.*
@@ -16,10 +16,12 @@ import java.util.*
 
 class AgendarActivity :AppCompatActivity() {
     private lateinit var tvDatePicker: TextView
+    private lateinit var writeName: EditText
     private lateinit var botonFecha:Button
     private lateinit var tvTime: TextView
     private lateinit var btnTimePicker:Button
     private  lateinit var binding: AgendarCitaBinding
+    private  lateinit var spnServicios: Spinner
     private lateinit var database:DatabaseReference
 
 
@@ -34,6 +36,10 @@ class AgendarActivity :AppCompatActivity() {
 
         tvDatePicker = findViewById(R.id.tvFecha)
         botonFecha = findViewById(R.id.botonFecha)
+
+        spnServicios = findViewById(R.id.spnServicios)
+
+        writeName=findViewById(R.id.writeName)
 
         tvTime = findViewById(R.id.tvHora)
         btnTimePicker = findViewById(R.id.botonHora)
@@ -64,7 +70,7 @@ class AgendarActivity :AppCompatActivity() {
         }
 
         //Spinner de elementos
-        val spinner = findViewById<Spinner>(R.id.spnElementos)
+        val spinner = findViewById<Spinner>(R.id.spnServicios)
 
         val lista = resources.getStringArray(R.array.opciones)
 
@@ -82,7 +88,7 @@ class AgendarActivity :AppCompatActivity() {
 
                 //Mensaje que aparece en la parte inferior de la pantalla
                 Toast.makeText(this@AgendarActivity,lista[p2],Toast.LENGTH_LONG).show()
-                val selectionService = p2
+
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -92,26 +98,42 @@ class AgendarActivity :AppCompatActivity() {
         }
 
 
-        /*val botonGenerar = findViewById<Button>(R.id.btnGenerarCita)*/
+        // get reference to button
+        val btn_click_me = findViewById(R.id.btnGenerarCita) as Button
+        // set on-click listener
+        btn_click_me.setOnClickListener {
 
-        binding.btnGenerarCita.setOnClickListener {
-
-            val Name = binding.name.text.toString()
-            val service = spinner.onItemSelectedListener.toString()
-            val date = tvDatePicker.toString()
-            val hour = tvTime.toString()
+            val name = writeName.text.toString()
+            val service = spnServicios.getSelectedItem().toString();
+            val date =  tvDatePicker.text.toString()
+            val hour =   tvTime.text.toString()
 
             database = FirebaseDatabase.getInstance().getReference("Citas")
-            val Citas = citationData(Name,date,hour,service)
-            database.child(Name).setValue(Citas).addOnSuccessListener {
-                binding.name.text.clear()
+            val Citas = citationData(name,date,hour,service)
 
-                Toast.makeText(this,"Cita Agendada",Toast.LENGTH_SHORT).show()
+            database.child(name).setValue(Citas).addOnSuccessListener {
+                writeName.text.clear()
+                tvDatePicker.setText("dd-MM-yyyy")
+                tvTime.setText("hora")
+
+                Toast.makeText(this,"Cita Agendada", Toast.LENGTH_SHORT).show()
             }.addOnFailureListener{
-                Toast.makeText(this,"ERROR",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"ERROR", Toast.LENGTH_SHORT).show()
             }
+        }
+
+
+        val btnVerCalendario= findViewById(R.id.btnVerCitados) as Button
+
+        btnVerCalendario.setOnClickListener {
+
+            var cambiar= Intent( this,CalendarActivity::class.java )
+            startActivity(cambiar)
+            finish()
 
         }
+
+
 
     }
 
